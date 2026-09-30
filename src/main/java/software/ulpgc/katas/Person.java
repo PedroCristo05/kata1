@@ -2,22 +2,7 @@ package software.ulpgc.katas;
 
 import java.time.LocalDate;
 
-public class Person {
-
-    private final String name;
-    private final LocalDate birthDate;
-    public Person(String name, LocalDate birthDate) {
-        this.name = name;
-        this.birthDate = birthDate;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
+public record Person(String name, LocalDate birthDate) {
 
     public int calculateAge() {
         return toYears(LocalDate.now().toEpochDay() - birthDate.toEpochDay());
