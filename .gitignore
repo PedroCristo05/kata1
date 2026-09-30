@@ -5,6 +5,7 @@ target/
 .kotlin
 .class
 .jar
+out/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
