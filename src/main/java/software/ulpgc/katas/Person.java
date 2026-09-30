@@ -6,7 +6,6 @@ public class Person {
     private final String name;
 
     private final LocalDate birthDate;
-
     public Person(String name, LocalDate birthDate) {
         this.name = name;
         this.birthDate = birthDate;
@@ -24,7 +23,9 @@ public class Person {
         return toYears(LocalDate.now().toEpochDay() - birthDate.toEpochDay());
     }
 
+    public static final double DAYS_PER_YEAR = 365.25;
+
     private int toYears(long days) {
-        return (int) (days/365.25);
+        return (int) (days/ DAYS_PER_YEAR);
     }
 }
